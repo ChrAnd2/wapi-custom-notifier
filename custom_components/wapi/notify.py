@@ -66,7 +66,7 @@ class MatterNotificationService(BaseNotificationService):
         }
         self.__send(msg_data)
 
-        if data["media_url"]:
+        if "media_url" in data:
             media_urls = data["media_url"].splitlines()
             for url in media_urls:
                 media_data = {
